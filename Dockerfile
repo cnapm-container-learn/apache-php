@@ -1,7 +1,7 @@
 FROM tutum/apache-php
 MAINTAINER wdxxs2z <jackyuan88726@gmail.com>
 
-RUN apt-get update && apt-get install -y wget expect
+RUN apt-get update && apt-get install -y wget expect php5-fpm
 
 ENV TINGYUN_AGENT_VERSION 1.4.1
 
