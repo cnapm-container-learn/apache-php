@@ -2,18 +2,15 @@
 
 set timeout 30
 
-spawn /app/tingyun-agent-php-1.4.1.x86_64.bin
+spawn /OneAPM/oneapm-php5-linux-install-script/oneapm-install install --license=XXXXXXXCWQ8f457HTVgTWA0VCB24a8XXXXXXXXANG4a6fVAESwZUFVRX4a9fBQA
+aAwZXXXX=
 
-set timeout 2000
-expect "*Enter choice (1-2, 0 to exit): "
+set timeout 200
+expect "*Selection (1-2, 0 to exit or all): "
 send "1\r"
 
-set timeout 300
-expect "*license key*"
-send "123456\r"
-
-set timeout 300
-expect "*website*"
-send "123456\r"
+set timeout 12000
+expect "*Please input the absolute path of php.ini: "
+send "/etc/php5/apache2/php.ini\r"
 
 expect eof
